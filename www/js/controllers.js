@@ -1,6 +1,14 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope) {})
+.controller('DashCtrl', function($scope, $ionicPopup, $timeout) {
+    $scope.keep = function() {
+      var alertPopup = $ionicPopup.alert({
+       title: 'pishao\'s test',
+       template: '<div>{{data.number}}</div>',
+      });
+   };
+
+})
 
 .controller('ChatsCtrl', function($scope, Chats) {
   // With the new view caching in Ionic, Controllers are only called

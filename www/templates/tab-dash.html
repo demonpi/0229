@@ -2,7 +2,7 @@
   <ion-content class="padding">
     <div class="list">
       <label class="item item-input">
-        <input type="text" placeholder="¥ 输入金额">
+        <input type="number" placeholder="¥ 输入金额" min="0.0" step="0.01" ng-model='data.number'>
       </label>
     </div>
 
@@ -13,7 +13,7 @@
           <option>衣</option>
           <option selected>食</option>
           <option>住</option>
-          <option>住</option>
+          <option>行</option>
         </select>
       </label> 
       <label class="item item-input item-select" >
@@ -23,7 +23,7 @@
         </select>
       </label>
       <label class="item item-input item-select" >
-        <div class="input-label">二级类别</div>
+        <div class="input-label">三级类别</div>
         <select>
           <option selected>食</option>
         </select>
@@ -31,9 +31,13 @@
     </div>
 
     <div>
-      <button class="button button-block button-positive">
+      <button class="button button-block button-positive" ng-click="keep()">
         记一笔
       </button>
+    </div>
+
+    <div>
+      {{data.number}}
     </div>
 
   </ion-content>
